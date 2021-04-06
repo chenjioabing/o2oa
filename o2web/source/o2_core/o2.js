@@ -2193,6 +2193,9 @@ o2.core = true;
     function leftBorder(element){
         return styleNumber(element, 'border-left-width');
     }
+    function isBody(element){
+        return (/^(?:body|html)$/i).test(element.tagName);
+    }
 
     [Document, Window].invoke('implement', {
         getSize: function(){
